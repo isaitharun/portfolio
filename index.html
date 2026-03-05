@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Tharun | Unity Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon for tech logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Sai Tharun</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="hero-content fade-in">
+            <p class="greeting">Hi, I am</p>
+            <h1 class="name">Sai Tharun</h1>
+            <h2 class="role">Unity Developer <span>&</span> Software Engineer</h2>
+            <p class="hero-desc">Building immersive virtual experiences, interactive games, and robust applications
+                across platforms.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="section-title fade-in">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content fade-in">
+            <div class="glass-card about-card">
+                <p>I am a passionate <strong>Unity Game Developer</strong> with a diverse skill set spanning across
+                    various domains of software development. I create engaging 3D environments, complex game logic, and
+                    polished user interfaces.</p>
+                <br>
+                <p>Beyond game development, I have robust experience in <strong>Web Development</strong> (both classic
+                    HTML/CSS/JS and React JS) and <strong>Mobile App Development</strong> using Android and Flutter,
+                    integrated with Google Firebase for powerful backend services.</p>
+                <br>
+                <p>Whether it's building a specialized tool in WPF, modeling assets in Blender, or delivering full-stack
+                    web solutions, I love bridging the gap between imagination and functional software.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="section-title fade-in">
+            <h2>My Tech Stack</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-grid fade-in">
+            <!-- Game Dev & Desktop -->
+            <div class="skill-category glass-card">
+                <h3>Game & Desktop</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="devicon-unity-original"></i><span>Unity 3D</span></div>
+                    <div class="skill-item"><i class="devicon-csharp-plain"></i><span>C#</span></div>
+                    <div class="skill-item"><i class="devicon-blender-original"></i><span>Blender</span></div>
+                    <div class="skill-item"><i class="devicon-dot-net-plain-wordmark"></i><span>WPF / .NET</span></div>
+                </div>
+            </div>
+
+            <!-- Web Dev -->
+            <div class="skill-category glass-card">
+                <h3>Web Development</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="devicon-react-original"></i><span>React JS</span></div>
+                    <div class="skill-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                    <div class="skill-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                    <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                </div>
+            </div>
+
+            <!-- Mobile & Backend -->
+            <div class="skill-category glass-card">
+                <h3>Mobile & Cloud</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="devicon-android-plain"></i><span>Android</span></div>
+                    <div class="skill-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
+                    <div class="skill-item"><i class="devicon-firebase-plain"></i><span>Firebase</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="section-title fade-in">
+            <h2>Featured Projects</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="projects-container">
+            <!-- Project 1: Video Player -->
+            <div class="project-card glass-card fade-in">
+                <div class="project-info">
+                    <span class="project-status completed">Completed</span>
+                    <h3>Video Player</h3>
+                    <p>A video player application built for Windows. The application features a clean user interface and
+                        smooth playback capabilities tailored for desktop environments.</p>
+                    <div class="project-tech">
+                        <span>WPF</span>
+                        <span>C#</span>
+                        <span>.NET</span>
+                    </div>
+                </div>
+                <!-- Video Player Carousel -->
+                <div class="project-visual">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="assets/images/Video%20Player/Screenshot%20(27).png" alt="Video Player Screen 1"
+                                class="carousel-slide active">
+                            <img src="assets/images/Video%20Player/Screenshot%20(28).png" alt="Video Player Screen 2"
+                                class="carousel-slide">
+                        </div>
+                        <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Company Website -->
+            <div class="project-card glass-card reverse fade-in">
+                <div class="project-info">
+                    <span class="project-status completed">Completed</span>
+                    <h3>Company Website</h3>
+                    <p>A professional website developed for a corporate client. Designed to meet specific business
+                        requirements and maintain corporate identity.</p>
+                    <div class="project-tech">
+                        <span>Web Development</span>
+                        <span>HTML/CSS/JS</span>
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+
+                <div class="project-visual placeholder-visual">
+                    <div class="coming-soon">
+                        <i class="fa-solid fa-lock"></i>
+                        <p>Pictures not available due to company policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="footer-content fade-in">
+            <h2>Let's Connect</h2>
+            <p>I'm always open to discussing new projects, collaborative opportunities, or bringing your ideas to life.
+            </p>
+
+            <div class="social-links">
+                <a href="https://github.com/isaitharun" target="_blank" class="social-btn glass-card"
+                    aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <!-- Add more links here like LinkedIn if needed -->
+            </div>
+
+            <p class="copyright">© <span id="year"></span> Sai Tharun. Built with <i class="fa-solid fa-heart"
+                    style="color: #ff3366;"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
