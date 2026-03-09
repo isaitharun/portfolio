@@ -13,11 +13,11 @@ window.addEventListener('scroll', () => {
 
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
@@ -48,17 +48,20 @@ document.querySelectorAll('.fade-in').forEach(element => {
     observer.observe(element);
 });
 
-// Carousel Logic for Mini Games Collection
-const track = document.querySelector('.carousel-track');
-if (track) {
+// Carousel Logic for multiple carousels
+const carousels = document.querySelectorAll('.carousel-container');
+carousels.forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    if (!track) return;
+
     const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next-btn');
-    const prevButton = document.querySelector('.prev-btn');
-    const dotsNav = document.querySelector('.carousel-dots');
-    
+    const nextButton = carousel.querySelector('.next-btn');
+    const prevButton = carousel.querySelector('.prev-btn');
+    const dotsNav = carousel.querySelector('.carousel-dots');
+
     // We already statically created dots, but verify they match slides length
     let dots = Array.from(dotsNav.children);
-    
+
     let currentSlideIndex = 0;
 
     const updateCarousel = (index) => {
@@ -76,7 +79,7 @@ if (track) {
         slides[currentSlideIndex].classList.add('active');
 
         // Update dots
-        if(dots.length === slides.length) {
+        if (dots.length === slides.length) {
             dots.forEach(dot => dot.classList.remove('active'));
             dots[currentSlideIndex].classList.add('active');
         }
@@ -90,26 +93,30 @@ if (track) {
     // Stop auto-advance on interaction
     const stopAutoAdvance = () => {
         clearInterval(carouselInterval);
-        // Optional: restart after a delay
-        // setTimeout(() => { carouselInterval = setInterval(() => updateCarousel(currentSlideIndex + 1), 4000); }, 10000);
     };
 
-    nextButton.addEventListener('click', () => {
-        stopAutoAdvance();
-        updateCarousel(currentSlideIndex + 1);
-    });
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            stopAutoAdvance();
+            updateCarousel(currentSlideIndex + 1);
+        });
+    }
 
-    prevButton.addEventListener('click', () => {
-        stopAutoAdvance();
-        updateCarousel(currentSlideIndex - 1);
-    });
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            stopAutoAdvance();
+            updateCarousel(currentSlideIndex - 1);
+        });
+    }
 
-    dotsNav.addEventListener('click', e => {
-        const targetDot = e.target.closest('.dot');
-        if (!targetDot) return;
-        
-        stopAutoAdvance();
-        const targetIndex = dots.findIndex(dot => dot === targetDot);
-        updateCarousel(targetIndex);
-    });
-}
+    if (dotsNav) {
+        dotsNav.addEventListener('click', e => {
+            const targetDot = e.target.closest('.dot');
+            if (!targetDot) return;
+
+            stopAutoAdvance();
+            const targetIndex = dots.findIndex(dot => dot === targetDot);
+            updateCarousel(targetIndex);
+        });
+    }
+});
